@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tick.. | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!------------------------------------------------------------------------------------------------------------------------------------
+    ========================================== HTML FOR THE SIDEBAR WITH LOGO AND TABS ===================================================
+----------------------------------------------------------------------------------------------------------------------------------------->
+    <section class="sidebar">
+        <!-- <div class="toggle-menu" style="display: none;">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="line line4"></div>
+        </div> -->
+        <div class="close-button">
+            <img src="images/close.svg">
+        </div>
+        <aside>
+            <div class="logo">
+                <img src="images/todo-app-tick-logo.svg" alt="todo app logo">
+            </div>
+            <div class="tabs-container">
+                <ul>
+                    <li class="dashboard tab active" data-li="dashboard">
+                       <a href="#"> Dashboard</a>
+                    </li>
+                    <li class="schedule tab" data-li="schedule">
+                       <a href="#"> Schedule</a>
+                    </li>
+                    <li class="profile tab" data-li="profile">
+                       <a href="#"> Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </section>
+
+<div class="main-container">
+    <!------------------------------------------------------------------------------------------------------------------------------------
+    ===================================== HTML FOR THE TOP BAR WITH SEARCH INPUT AND ADD BUTTON ============================================
+----------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="topbar no-display-at-profile">
+        <div class="search">
+            <img src="images/search-normal.svg" alt="search-icon">
+            <input type="search" name="search" id="search" placeholder="search your to-do's">
+        </div>
+        <div class="notifications-icon">
+            <img src="images/notifications-icon.svg" alt="notifications-icon">
+        </div>
+        <div class="add-to-do-btn">
+            <button><img src="images/note-add.svg" alt="to-do-icon">Add to-do</button>
+        </div>
+    </div>
+    <div class="mobile-top-bar">
+        <div class="top-icons">
+           <div class="menu-button"> <img src="images/menu-icn.svg"></div>
+            <div><img src="images/notifications-icon.svg"></div>
+        </div>
+       <div class="greet-add">
+        <div class="greet">
+            <small>Good <span id="greet"></span>, Edit</small>
+            <h1>You have <span class="purple-text">49 tasks</span> this month</h1>
+        </div>
+        <div class="add-to-do-btn">
+            <button><img src="images/note-add.svg" alt="to-do-icon">Add to-do</button>
+        </div>
+       </div>
+       <div class="search">
+        <img src="images/search-normal.svg" alt="search-icon">
+        <input type="search" name="search" id="search" placeholder="search your to-do's">
+        </div>
+
+        <div class="no">
+            <ul class="mobile-task task-number-tabs">
+                <li class="to-do-task task-tab activate" data-li="todotask">
+                    
+                        <div class="task-status">
+                            <div>
+                                <img src="images/task-square.svg">
+                            </div>
+                            <div>
+                                To - Do
+                            </div>
+                        </div>
+                    
+                    
+                    </li>
+        
+            
+        
+                    <li class="completed-task task-tab" data-li="completetask">
+                        <div class="task-status">
+                            <div>
+                                <img src="images/check-circle.svg">
+                            </div>
+                            
+                           <div>
+                            Completed
+                           </div>
+                        </div>                   
+                    </li>
+                </ul>
+        </div>
+    </div>
+      <!------------------------------------------------------------------------------------------------------------------------------------
+    ========================================== GREETING AND NUMBER OF TASKS ===================================================
+----------------------------------------------------------------------------------------------------------------------------------------->
+<div class="content-display dashboard tab1">
+    <div class="greet">
+        <small>Good <span id="greet"></span>, Edit</small>
+        <h1>You have <span class="purple-text">49 tasks</span> this month</h1>
+    </div>
+
+    <ul class="task-number-tabs">
+        <li class="to-do-task task-tab activate" data-li="todotask">
+            
+                <div class="task-status">
+                    <img src="images/task-square.svg">
+                    To - Do
+                </div>
+            <span class="number num1">
+                99+
+            </span> 
+            
+            </li>
+
+    
+
+            <li class="completed-task task-tab" data-li="completetask">
+                <div class="task-status">
+                    <img src="images/task-square3.svg">
+                    Completed
+                </div>
+                <span class="number num2">
+                    80
+                </span>                    
+            </li>
+        </ul>
+              <!------------------------------------------------------------------------------------------------------------------------------------
+========================================= TODAY'S TASK ===================================================
+----------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="task-cards-heading" id="today">
+        <h2>Today's tasks</h2>
+    </div>
+    <div class="taskcard-container tasktabitem" id="task1" >
+        <div class="taskcard card1 today">
+            <!-- <img src="images/Ellipse 2.svg" class="top-right-circle1">
+            <img src="images/Ellipse 3.svg" class="top-right-circle2"> -->
+            <div class="title">Portfolio Meeting</div>
+            <div class="taskcard-small"><small>Group discussion for the project</small></div>
+            <div class="time"><p>9:00AM</p></div>
+            <div class="taskcard-flex">
+                <small>Time left</small><div>20 mins</div>
+            </div>
+            <div><span class="bar"><span class="progress"></span></span></div>
+        </div>
+        <div class="taskcard card2 today">
+            <!-- <img src="images/Ellipse 2.svg" class="top-right-circle1">
+            <img src="images/Ellipse 3.svg" class="top-right-circle2"> -->
+            <div class="title">Portfolio Meeting</div>
+            <div class="taskcard-small"><small>Group discussion for the project</small></div>
+            <div class="time"><p>9:00AM</p></div>
+            <div class="taskcard-flex">
+                <small>Time left</small><div>02 hours</div>
+            </div>
+            <div><span class="bar"><span class="progress"></span></span></div>
+        </div>
+        <div class="taskcard card3 today">
+            <!-- <img src="images/Ellipse 2.svg" class="top-right-circle1">
+            <img src="images/Ellipse 3.svg" class="top-right-circle2"> -->
+            <div class="title">Portfolio Meeting</div>
+            <div class="taskcard-small"><small>Group discussion for the project</small></div>
+            <div class="time"><p>9:00AM</p></div>
+            <div class="taskcard-flex">
+                <small>Time left</small><div>01 hours</div>
+            </div>
+            <div><span class="bar"><span class="progress"></span></span></div>
+        </div>
+        <div class="taskcard card4 today">
+            <!-- <img src="images/Ellipse 2.svg" class="top-right-circle1">
+            <img src="images/Ellipse 3.svg" class="top-right-circle2"> -->
+            <div class="title">Portfolio Meeting</div>
+            <div class="taskcard-small"><small>Group discussion for the project</small></div>
+            <div class="time"><p>9:00AM</p></div>
+            <div class="taskcard-flex">
+                <small>Time left</small><div>20 mins</div>
+            </div>
+            <div><span class="bar"><span class="progress"></span></span></div>
+        </div>
+    </div>
+    <div class="task-cards-heading" id="recent">
+        <h2>Recent activities</h2>
+    </div>
+
+    <!---------------------------------------TO-DO'S -------------------------------------------------------------------------->
+    <div class="to-dos tasktabitem" style="display: none;" id="task2">
+        <div class="task-card-cont">
+            <div class="taskcard card2">
+                <!-----Delete Icon Here------------>
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+            <div class="taskcard card1">
+            <!----------Delete Icon Here--------> 
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+            <div class="taskcard card1">
+            <!-----Delete Icon Here----->
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+            <div class="taskcard card3">
+                <!----Delete Icon Here---->
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+            <div class="taskcard card2">
+            <!----Delete Icon Here---->
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+            <div class="taskcard card4">
+                <!-----Delete Icon Here------------>
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+        </div>
+        <div class="task-img">
+            <div>Check out your tasks today.</div>
+            <img src="images/pana.svg" alt="ilustartion with a to do list">
+        </div>
+    </div>
+
+
+     <!---------------------------------------Completed -------------------------------------------------------------------------->
+     <div class="completed-container tasktabitem" style="display: none;" id="task3">
+        <div class="task-card-cont">
+            <div class="taskcard card2">
+                <!-----Delete Icon Here------------>
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+            <div class="taskcard card1">
+            <!----------Delete Icon Here--------> 
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+            <div class="taskcard card1">
+            <!-----Delete Icon Here----->
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+            <div class="taskcard card3">
+                <!----Delete Icon Here---->
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+            <div class="taskcard card2">
+            <!----Delete Icon Here---->
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+            <div class="taskcard card4">
+                <!-----Delete Icon Here------------>
+                <div class="title">Portfolio Meeting</div>
+                <div class="taskcard-small"><small>Group discussion for the project</small></div>
+                <div class="time">Completed:</div>
+                <div class="time">9:00AM</div>
+                <div class="time">Wed 23rd, June</div>
+            </div>
+        </div>
+        <div class="task-img">
+            <div>Great! You've completed a lot <br> of tasks.</div>
+            <img src="images/pana3.svg" alt="ilustartion with a completed to do list">
+        </div>
+    </div>
+
+</div>
+   <div class="schedule tab2" style="display: none;">
+    <div class="gen-days">
+        <div class="time-date">
+            <div class="month-day">
+                <div class="pres-day">
+                    <div class="d-day"></div>
+                    <div id="day"></div>
+                </div>
+                <img src="images/cloud-sun-rain.svg" alt="">
+            </div>
+    
+            <div class="week-day">
+                <div class="day1 day light-d">
+                    <div class="week-d">16 Sun</div>
+                </div>
+    
+                <div class="day2 day light-d">
+                    <div class="week-d">17 Mon</div>
+                </div>
+    
+                <div class="day3 day light-d">
+                    <div class="week-d ">18 Tue</div>
+                </div>
+        
+                <div class="day4 day light-d">
+                    <div class="week-d ">19 Wed</div>
+                </div>
+        
+                <div class="day5 day light-d">
+                    <div class="week-d ">20 Thur</div>
+                </div>
+    
+                <div class="day6 day light-d">
+                    <div class="week-d ">21 Fri</div>
+                </div>
+    
+                <div class="day7 day light-d">
+                    <div class="week-d ">22 Sat</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toggle-modal">
+        <div class="text">Schedule</div>
+        <button class="tog-btn" id="toggle-btn"><img src="images/purple-plus.svg" alt=""></button>
+    </div>
+
+    <div class="modal-screen" id="modal-screen">
+        <div class="heading">
+            <div class="title">Add a new to-do</div>
+            <img src="images/close-square.svg" alt="" id="close-square">
+        </div>
+
+        <div class="modal-form">
+            <p class="heading-body">Let’s crush some milestones together Edi!</p>
+            <div class="to-do">
+                <div class="gen1 gen-tasks">
+                    <div class=" gen2 task-text">
+                        <h4 class="gen3 task">Task</h4> 
+                        <div class="gen4 task-title">A short label to help us remember your task</div>
+                    </div>
+                    <div class="task-input">
+                        <input type="text" placeholder="E.g Monday Night Lounge with Biggie">
+                    </div>
+                </div>    
+
+                <div class="gen1 task-discription ">
+                    <div class="gen2 discription-text">
+                        <h4 class="gen3 discription">Discription <span class="opt">(Optional)</span></h4>
+                        <div class=" gen4 discription-title">A description of what you aim to accomplish, so we help you do just that!</div>
+                    </div>
+                    <div class="task-input">
+                        <input type="text" placeholder="E.g Monday Night Lounge with Biggie">
+                    </div>
+                </div>
+
+                <div class="modal-third">
+                    <form id="input" class="date-time same-day">
+                        <div class="radio-selection">
+                            <input type="radio" id="radio">
+                            <label for="radio">
+                                <h4 class="radio-text">Same day</h4>
+                                <div class="gen4 radio-discrip">Select this if your task is  for the same day</div>
+                            </label>
+                        </div>
+    
+                        <div class="date-time-selectors">
+                            <div class="gen-date-selector">
+                                <div class="date-selector">
+                                    <h4 class="d-selec">Date</h4>
+                                    <div class="d-selec-date">
+                                        <label for="date"><img src="images/calendar.svg" alt=""></label>
+                                        <input type="text" placeholder="31/02/2034" id="date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gen-time-selector">
+                                <div class="time-selector">
+                                    <h4 class="d-selec">Time</h4>
+                                    <div class="d-selec-date">
+                                        <label for="time1"><img src="images/timer-start.svg" alt=""></label>
+                                        <input type="text" placeholder="10:30:00 AM" class="t-time" id="time1">
+                                    </div>
+                                </div>
+                                <div class="time-selector">
+                                    <h4 class="d-selec">Time</h4>
+                                    <div class="d-selec-date">
+                                        <label for="time2"><img src="images/timer-start.svg" alt=""></label>
+                                        <input type="text" placeholder="05:00:00 AM" class="t-time" id="time2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+    
+                    <form id="input2" class="date-time any-day">
+                        <div class=" rad-2 radio-selection">
+                            <input type="radio" id="radio">
+                            <label for="radio2">
+                                <h4 class="radio-text">Custom date <span class="opt">(Optional)</span></h4>
+                                <div class="gen4 radio-discrip">Select this if your task is scheduled to end after today</div>
+                            </label>
+                        </div>
+    
+                        <div class="date-time-selectors">
+                            <div class="gen-date-selector">
+                                <div class="date-selector">
+                                    <h4 class="d-selec">Date</h4>
+                                    <div class="d-selec-date">
+                                        <label for="pdate"><img src="images/calendar.svg" alt=""></label>
+                                        <input type="text" placeholder="__/__/____" id="pdate">
+                                    </div>
+                                </div>
+                                <div class="date-selector">
+                                    <h4 class="d-selec">Date</h4>
+                                    <div class="d-selec-date">
+                                        <label for="pdate2"><img src="images/calendar.svg" alt=""></label>
+                                        <input type="text" placeholder="__/__/____" id="pdate2">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="gen-time-selector">
+                                <div class="time-selector">
+                                    <h4 class="d-selec">Time</h4>
+                                    <div class="d-selec-date">
+                                        <label for="ptime"><img src="images/timer-start.svg" alt=""></label>
+                                        <input type="text" placeholder="10:30:00 AM" class="t-time" id="ptime">
+                                    </div>
+                                </div>
+                                <div class="time-selector">
+                                    <h4 class="d-selec">Time</h4>
+                                    <div class="d-selec-date">
+                                        <label for="ptime2"><img src="images/timer-start.svg" alt=""></label>
+                                        <input type="text" placeholder="05:00:00 PM" class="t-time" id="ptime2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+
+            <div class="to-do-btn">
+                <button class="cancel">Cancel</button>
+                <button type="submit" class="create">Create to-do</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="daily-tasks" id="daily-tasks">
+        <div class="single-task" id="single-task">
+            <div class="sin-t-wrap">
+                <div class="task-wrapper">
+                    <div class="task-time">
+                        <div class="d-task-text">Meeting about work report</div>
+                        <div class="d-task-time">9:00-11:00</div>
+                    </div>
+        
+                    <div class="task-details">
+                        <div class="duration">
+                            <img src="images/clock.svg" alt="" class="clock">
+                            <div class="dur-time">2 hours</div>
+                        </div>
+            
+                        <div class="location">
+                            <img src="images/location.svg" alt="" class="location-icon">
+                            <div class="place">Office</div>
+                        </div>
+            
+                        <div class="how-often">
+                            <img src="images/front-back.svg" alt="" class="arrow">
+                            <div class="precise">Weekly</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dark-btn" id="dark-btn">
+            <button class="delete" id="deletebtn">Delete</button>
+            <button class="edit" id="editbtn">Edit</button>
+        </div>
+
+        <div class="single-task" id="single-task">
+            <div class="task-wrapper">
+                <div class="task-time">
+                    <div class="d-task-text">Meeting about work report</div>
+                    <div class="d-task-time">9:00-11:00</div>
+                </div>
+    
+                <div class="task-details">
+                    <div class="duration">
+                        <img src="images/clock.svg" alt="" class="clock">
+                        <div class="dur-time">2 hours</div>
+                    </div>
+        
+                    <div class="location">
+                        <img src="images/location.svg" alt="" class="location-icon">
+                        <div class="place">Hospital</div>
+                    </div>
+        
+                    <div class="how-often">
+                        <img src="images/front-back.svg" alt="" class="arrow">
+                        <div class="precise">Weekly</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dark-btn" id="dark-btn">
+            <button class="delete" id="deletebtn">Delete</button>
+            <button class="edit" id="editbtn">Edit</button>
+        </div>
+    </div>
+    </div>
+   </div>
+   <div class="profile tab3" style="display: none;">
+    <h1>PROFILE</h1>
+    Plesae take a very good look at my css style rules and do not use any css class name I have used before to avoid comflicting css rules
+</div>
+        </div>
+    
+    <script src="js/sch.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

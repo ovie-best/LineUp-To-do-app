@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #FFFFFF;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+.main {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    height: 100vh;
+}
+
+.sign-in-container {
+    width: 32%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-right: 120px;
+}
+
+.sign-in-link {
+    margin-bottom: 35px;
+}
+
+div input, button {
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+div input {
+    border-radius: 4px;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #9C9393;
+    margin-bottom: 15px;
+}
+div input[type="password"] {
+    margin-bottom: 5px;
+}
+a.link {
+    text-decoration: none;
+    /* border-bottom:  1px solid #000; */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #000;
+    padding-bottom: 5px;
+}
+a.link[href="signup.html"] {
+    float: right;
+    border-bottom: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.pasword-reset {
+    font-weight: 700;
+    font-size: .75em;
+    letter-spacing: 0.01em;
+    color: #1C1C1C;
+    text-align: right;
+    margin-bottom: 30px;
+}
+.reset {
+    color: #9667E0;
+    border-bottom: none
+}
+a.reset{
+    font-weight: 700;
+    font-size: .85em;
+    letter-spacing: 0.01em;
+    padding: 0;
+    text-decoration: none;
+    margin-left: 5px;
+}
+.sign-in-button button, .sign-up-button input {
+    background: #E7C6FF;
+    border: 1px solid #E7C6FF;
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #000;
+    gap: 10px;
+}
+.sign-up-button input {
+    border: 1px solid #9667E0;
+    border-radius: 4px;
+    padding: 10px 24px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+p.no-account  {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center;
+    padding: 20px;
+}
+
+.to-do-image {
+    float: right;
+}
+
+/* img.top-logo {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0px;
+    top: 0px;
+} */
+
+@media screen and (max-width: 900px) {
+    .sign-in-container {
+        margin-right: 60px;
+        width: 40%;
+    }
+}
+@media screen and (max-width: 780px) {
+    a.link, .sign-in-button button, .sign-up-button input, p.no-account {
+        font-size: .9em;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width: 700px) {
+    .main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .sign-in-container {
+        width: 50%;
+    }
+    .to-do-image img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+    .to-do-image {
+        display: none;
+    }
+
+    .sign-in-container {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 431px) {
+    .mobile-logo  {
+        display: none;
+    }
+}
+@media screen and (max-width: 430px) {
+    .mobile-logo img {
+        width: 100%;
+        height: auto;
+        left: 0px;
+        top: 0px;
+    }
+
+    .main {
+        padding-top: 0;
+    }
+}

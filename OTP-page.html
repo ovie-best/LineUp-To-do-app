@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="OTP-page/style.css">
+    <title>Document</title>
+</head>
+
+<body onload="pageloaded()">
+    <img src="OTP-page/emaillogo.svg" alt="email">
+    <br><br>
+    <h1>Reset Password</h1>
+    <br>
+    <h3>Enter the four digit code sent to your email</h3>
+    <br><br>
+    <form>
+        <input type="number" placeholder="_" required id="first" maxlength="1" onkeyup="typeevent(this,'second')" onkeydown="deleteevent()" onclick="editinput()">
+        <input type="number" placeholder="_" required id="second" maxlength="1" onkeyup="typeevent(this,'third')" onkeydown="deleteevent(this,'first')" onclick="editinput()">
+        <input type="number" placeholder="_" required id="third" maxlength="1" onkeyup="typeevent(this,'Fourth')" onkeydown="deleteevent(this,'second')" onclick="editinput()">
+        <input type="number" placeholder="_" required id="Fourth" maxlength="1" onkeyup="typefinished()" onkeydown="deleteevent(this,'third')" onclick="editinput()">
+    </form>
+    <br><br><br>
+    <div class="resendcode" onclick="resendotp()">
+        <h3>Didn't recieve any code? Resend in 15s</h3>
+        <img src="OTP-page/resendicon.svg" alt="resendicon">
+    </div>
+    <br><br><br>
+    <a href="signIn.html"><h4> <span id="backarrow">&#8592;</span> &nbsp; Back to login</h4></a>
+
+    <script src="OTP-page/script.js"></script>
+</body>
+
+</html>

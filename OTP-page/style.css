@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    transform: translateY(25%);
+}
+
+@font-face {
+    font-family: poppins_bold;
+    src: url(Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: poppins_medium;
+    src: url(Poppins-Medium.ttf);
+}
+
+h1, h3, h4 {
+    font-family: poppins_bold;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+form {
+    font-family: poppins_medium;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4, label, button{
+    font-size: 16px;
+}
+
+h4{
+    cursor: pointer;
+    width: 150px;
+    margin: auto;
+}
+.resendcode{
+    display: flex;
+    width: 508px;
+    margin: auto;
+    cursor: pointer;
+}
+
+#backarrow{
+    font-size: 24px;
+}
+
+form{
+    margin: auto;
+    display: grid;
+    width: 336px;
+    display: flex;
+    gap: 45px;
+}
+
+input {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 3px solid;
+    font-size: 24px;
+    font-family: poppins_bold;
+}
+
+::placeholder{
+    font-size: 16px;
+    font-family: poppins_bold;
+}
+
+/*to remove the arrow/spinners beside a input box with number type*/
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+input[type=numeber] {
+    -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 375px){
+    .resendcode{
+        display: flex;
+        width: 308px;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    form{
+        margin: auto;
+        width: 236px;
+        display: flex;
+        gap: 45px;
+        justify-content: center;
+    }
+
+    input {
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        border: 3px solid;
+        font-size: 24px;
+        font-family: poppins_bold;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+    
+    h4, label, button{
+        font-size: 12px;
+    }
+    
+    
+}

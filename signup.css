@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+body {
+    background: #FFFFFF;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+.signup-container {
+     display: flex; 
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px; */
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0;
+    
+}
+.create-account a {
+    text-decoration: none;
+    color: #fff;
+}
+.welcome-rectangle {
+    width: 32%;
+    height: auto;
+    background: #E7C6FF;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.welcome-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 36px;
+    color: #000;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+form {
+    padding: 18px;
+}
+input, button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    padding: 16px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid rgba(231, 198, 255, 0.2);
+    border-radius: 5px;
+}
+button {
+    cursor: pointer;
+}
+ .reminder {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: .75em;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #9667E0;
+    text-align: left;
+    margin-bottom: 30px;
+ }
+
+ input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+    border: 1px solid #E7C6FF;
+    border-radius: 5px;
+    margin-right: 5px;
+ }
+.create-account {
+    background: #C8B6FF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #1C1C1C;
+    cursor: pointer;
+}
+.create-account:hover {
+    background-color: #d5c0f8;
+    color: #f6f4fa;
+}
+.have-account {
+    font-weight: 700;
+    font-size: .75em;
+    letter-spacing: 0.01em;
+    color: #1C1C1C;
+    text-align: center;
+    margin: 15px 0;
+}
+.have-account a {
+    text-decoration: none;
+}
+.login {
+    color: #cebdeb;
+}
+.or {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 19px;
+    text-align: center;
+    color: #1C1C1C;
+    opacity: 0.5;
+    margin-bottom: 15px;
+}
+
+.account-signup-button {
+    padding: 12px 24px;
+}
+
+.account-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.account-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account-signup-button:hover {
+    background-color: #f6f4fa;
+}
+.Sign-up-account-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.policy {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: .8em;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    padding: 0 45px;
+    color: #000000;
+}
+
+.amico {
+    width: 80%; 
+    height: auto;
+    float: right;
+}  
+
+@media screen and (max-width: 921px) {
+    .signup-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    /* .amico {
+        width: 80%;
+    } */
+    .welcome-rectangle {
+        width: 50%;
+    }
+    .policy {
+        padding: 0 38px;
+    }
+}
+
+@media screen and (max-width: 788px) {
+    .welcome-rectangle {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .amico {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .welcome-rectangle {
+        width: 85%;
+    }
+}
+
+@media screen and (min-width: 431px) {
+    .mobile {
+        display: none;
+    }
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------------------
+ ------------------------------------------ Styling for the mobile version. ---------------------------------------
+ --------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 430px) {
+    .signup-container {
+        display: none;
+    }
+    
+    .mobile-logo img {
+        width: 100%;
+        height: auto;
+        left: 0px;
+        top: 0px;
+    }
+    .mobile div h1 {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .leave-account, .my-account {
+        color: #9667E0;
+        border: 2px solid #9667E0;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        background: rgba(233, 203, 255, 0.1)
+    }
+
+    .mobile .have-account {
+        padding-left: 5px;
+        text-align: center;
+    }
+    .mobile .account-button button {
+        background: rgba(233, 203, 255, 0.1);
+        opacity: 0.6;
+        border: 2px solid #9667E0;
+        border-radius: 5px;
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+    /* .mobile input[type="password"] {
+        background: rgba(233, 203, 255, 0.1);
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.01618em;
+
+        color: #9667E0;
+
+        opacity: 0.5;
+        text-align: left;
+    } */
+
+   .mobile  .create-account {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1em;
+        line-height: 26px;
+        letter-spacing: 0.01em;
+        color: #fff;
+        background: #9667E0;
+        border-radius: 4px;
+        letter-spacing: 0.01em;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    
+    .mobile .or {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        opacity: 1;
+    }
+
+
+    .mobile .account-signup-button {
+        border: 1px solid #E7C6FF;
+    }
+
+  
+
+    .mobile .account-signup img {
+        float: left;
+    }
+
+
+    .mobile form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}

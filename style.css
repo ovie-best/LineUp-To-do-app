@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: ;
+}
+.ellipse {
+    width: 100vw;
+    height: 100vh;
+    border-bottom-right-radius: 400px;
+    background: #D9D9D9;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 250px;
+    gap: 8px;
+    color: #9667E0;
+}
+
+.container img {
+    width: 40px;
+    height: 40px;
+}
+.container p {
+    display: flex;
+    align-items: flex-end;
+    font-size: 48px;
+    font-family: 'Lobster', sans-serif;
+    color: #9667E0;
+}
+
+.onboarding-container{
+    font-family: 'Inter', sans-serif;
+}
+.onboarding-container .content {
+    max-width: 325px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.steps .image {
+   margin-bottom: -40px;
+}
+
+.steps h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.steps p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.steps{
+    width: 300%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    transition: all 400ms ease;
+}
+
+.steps :nth-child(2) {
+    margin-top: 30px;
+}
+
+.steps :nth-child(3) {
+    margin-top: 20px;
+}
+
+.skip-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 120px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.next-btn {
+    position: absolute;
+    bottom: 50px;
+    right: 120px;
+    border: none;
+    background:  #9667E0;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container .nxt-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 120px;
+    border: none;
+    background:  #9667E0;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.dots {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.dots .dot {
+    width: 23px;
+    height: 25px;
+    border-radius: 50%;
+    background: #E0E0E0;
+    cursor: pointer;
+
+}
+.dots .dot.active {
+    background:  #9667E0;
+}
+
+.steps :nth-child(1) p {
+    padding-left: 10px;
+}
+
+
+@media screen and (max-width: 375px){
+    
+    .steps img {
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 70px;
+        margin-bottom: 60px;
+        margin-top: 100px;
+    }
+
+    .steps p {
+        margin-left: -22px;
+        margin-bottom: 20px;
+    }
+
+    .dots {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: -60px;
+    }
+
+    .skip-btn {
+        position: absolute;
+        bottom: 120px;
+        left: 60px;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        margin-bottom: -60px;
+    }
+    
+    .next-btn {
+        position: absolute;
+        bottom: 120px;
+        right: 60px;
+        border: none;
+        background:  #9667E0;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: -60px;
+    }
+
+    .steps{
+        width: 300%;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        transition: all 400ms ease;
+    }
+
+    .ellipse {
+        width: 100vw;
+        height: 100vh;
+        border-bottom-right-radius: 250px;
+        background: #D9D9D9;
+        position: relative;
+    }
+
+    .container .nxt-btn {
+        position: absolute;
+        bottom: 50px;
+        left: 60px;
+        border: none;
+        background:  #9667E0;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    
+    }
+}
+

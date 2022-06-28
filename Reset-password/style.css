@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    transform: translateY(25%);
+}
+
+@font-face {
+    font-family: poppins_bold;
+    src: url(Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: poppins_medium;
+    src: url(Poppins-Medium.ttf);
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1, h3, h4 {
+    font-family: poppins_bold;
+}
+
+.form, button {
+    font-family: poppins_medium;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h4, label, button{
+    font-size: 16px;
+}
+
+h4{
+    cursor: pointer;
+    width: 150px;
+    margin: auto;
+}
+
+
+#backarrow{
+    font-size: 24px;
+}
+
+.form{
+    margin: auto;
+    display: grid;
+    width: 430px;
+}
+
+label {
+    text-align: left;
+    font-family: poppins_bold;
+    font-size: 20px;
+}
+
+input {
+    margin: 10px 0;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #9E9E9E;
+    color: #ffffff;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+::placeholder{
+    color: #ffffff;
+    font-size: 14px;
+    text-align: left;
+    
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #9E9E9E;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.password, .confirmpassword{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.password img, .confirmpassword img{
+    display: flex;
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: poppins_light;
+    src: url(Poppins-Light.ttf);
+}
+
+#passerror, #confirmpasserror{
+    font-family: poppins_light;
+    color: red;
+    text-align: left;
+    font-size: 14px;
+    font-style: italic
+}
+
+@media screen and (max-width: 375px){
+    .form{
+        margin: auto;
+        display: grid;
+        width: 300px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+    
+    h4, label, button{
+        font-size: 13px;
+    }
+
+   
+}
