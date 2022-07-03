@@ -22,7 +22,6 @@ for(var i = 0; i < sidebarTab.length; i++) {
             document.querySelector(".tab2").style.display = "none";
             document.querySelector(".tab3").style.display = "none";
             document.querySelector(".no-display-at-profile").style.display = "flex";
-            document.querySelector(".no-display-at-profile").style.display = "flex";
             document.querySelector(".mobile-top-bar .greet-add").style.display = "flex";
             document.querySelector(".mobile-top-bar .add-to-do-btn").style.display = "flex";
             document.querySelector(".mobile-top-bar .search").style.display = "flex";
@@ -49,7 +48,8 @@ for(var i = 0; i < sidebarTab.length; i++) {
             document.querySelector(".mobile-top-bar .greet-add").style.display = "none";
             document.querySelector(".mobile-top-bar .add-to-do-btn").style.display = "none";
             document.querySelector(".mobile-top-bar .search").style.display = "none";  
-            document.querySelector(".no").style.display = "none";   
+            document.querySelector(".no").style.display = "none";  
+            document.querySelector(".no-display-at-profile").style.display = "none"; 
         } 
         else {
             console.log("");
